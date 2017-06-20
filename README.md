@@ -9,8 +9,8 @@ Solution: compile a development version of Bazel
 ```Bash
 git clone Bazel
 bazel build //src:bazel
-sudo cp <Bazel directory of the master branch>/Bazel-bin/src/bazel /usr/local/bin/bazel
-```  
+sudo cp /Bazel-bin/src/bazel /usr/local/bin/bazel
+```
 
 optional: comment out bazel version check in tensorflow configration file
 ```Bash

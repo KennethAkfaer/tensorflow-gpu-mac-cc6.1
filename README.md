@@ -5,7 +5,7 @@ Build Tensorflow 1.2 with GPU support on Mac: possible errors and solutions
 -----
 Following the instructions in the [offcial documentation](https://www.tensorflow.org/install/install_sources) to build from source may not always work smoothly. Some possible errors not mentioned in the official instructions are listed here.
 
-### AssertionError: Could not find python binary: python3
+### 1. AssertionError: Could not find python binary: python3
 Solution: compile a development version of Bazel
 ```Bash
 git clone Bazel
@@ -18,16 +18,16 @@ optional: comment out bazel version check in tensorflow configration file
 # MIN_BAZEL_VERSION=0.4.5
 ```
 
-### dyld: Library not loaded: @rpath/libcudart.8.0.dylib
+### 2. dyld: Library not loaded: @rpath/libcudart.8.0.dylib
 Solution: follow instrunction provided by @Vijay https://stackoverflow.com/questions/39865212/dyld-library-not-loaded-rpath-libcudart-8-0-dylib-while-building-tensorflow
 
-### Segmentation fault: 11 error
+### 3. Segmentation fault: 11
 Solution: create a symbolic link
 ```Bash
 ln -sf /usr/local/cuda/lib/libcuda.dylib /usr/local/cuda/lib/libcuda.1.dylib
 ```
 
-### clang: warning: argument unused during compilation: '-pthread' <br/> ld: library not found for -lgomp
+### 4. clang: warning: argument unused during compilation: '-pthread' <br/> ld: library not found for -lgomp
 Solution: use brew LLVM for linking
 ```Bash
 brew install llvm

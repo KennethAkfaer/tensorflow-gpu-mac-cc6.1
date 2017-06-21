@@ -35,7 +35,9 @@ brew link --force llvm
 #later: brew unlink llvm
 ```
 
-    Comment: I used Command Line Tools for Xcode 8.0 for compiling and the latest llvm in brew for linking
+    Comment: I used Command Line Tools for Xcode 8.0 for compiling 
+    and the latest llvm in brew for linking. Don't know if Command Line Tools 
+    for Xcode 8.3 may work for both compiling and linking.
 
 A compiled whl for compute capability 6.1 (build on a Mac Pro with 1080ti) can be downloaded [here](https://pan.baidu.com/s/1jHM1Eh4)<br/>
 The configure script: 

@@ -1,8 +1,9 @@
 Build Tensorflow 1.2 with GPU support on Mac: possible errors and solutions
 =====
 
-Since v1.2, tensortflow dropped GPU support on Mac machines.
-Following the instructions in the documentation https://www.tensorflow.org/install/install_sources to build from source may not work smoothly, some possible errors not mentioned in the official instructions are list here.
+* As of version 1.2, TensorFlow no longer provides GPU support on Mac OS X.
+-----
+Following the instructions in the [offcial documentation](https://www.tensorflow.org/install/install_sources) to build from source may not always work smoothly. Some possible errors not mentioned in the official instructions are listed here.
 
 ### AssertionError: Could not find python binary: python3
 Solution: compile a development version of Bazel
@@ -36,14 +37,9 @@ brew link --force llvm
 
     Comment: I used Command Line Tools for Xcode 8.0 for compiling and the latest llvm in brew for linking
 
-A compiled whl for compute capability 6.1 (build on a Mac Pro with 1080ti) can be downloaded [here](https://pan.baidu.com/s/1jHM1Eh4)
-    
-    You have bazel 0.5.1-homebrew installed.
-    Please specify the location of python. [Default is /Users/admin/tensorflow1.2/tensorflow1.2/bin/python]: 
-    Found possible Python library paths:
-    /Users/admin/tensorflow1.2/tensorflow1.2/lib/python3.6/site-packages
-    Please input the desired Python library path to use.  Default is [/Users/admin/tensorflow1.2/tensorflow1.2/lib/python3.6/site-packages]
-    Using python library path: /Users/admin/tensorflow1.2/tensorflow1.2/lib/python3.6/site-packages
+A compiled whl for compute capability 6.1 (build on a Mac Pro with 1080ti) can be downloaded [here](https://pan.baidu.com/s/1jHM1Eh4)<br/>
+The configure script: 
+       
     Do you wish to build TensorFlow with MKL support? [y/N] n
     No MKL support will be enabled for TensorFlow
     Please specify optimization flags to use during compilation when bazel option "--config=opt" is specified [Default is -march=native]: 

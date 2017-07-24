@@ -64,3 +64,16 @@ The configure script:
     [Default is: "3.5,5.2"]: 6.1
     Do you wish to build TensorFlow with MPI support? [y/N] n
     Configuration finished
+    
+### 5. Tensorboard: ModuleNotFoundError: No module named 'tensorflow.tensorboard.tensorboard'
+Solution: compile Tensorboard from source code
+```Bash
+bazel build tensorboard:tensorboard
+```
+build the whl and install via pip
+```Bash
+./bazel-tensorboard/tensorboard/pip_package/build_pip_package.sh /tmp/tensorboard_pkg
+pip3 install /tmp/tensorboard_pkg/tensorflow_tensorboard-0.1.3-py3-none-any.whl
+```
+copy webfiles.zip from bazel-bin/tensorboard/ to your-vrirual-env-dir/lib/Python3.6/site-packages/tensorboard/   
+All Done!
